@@ -2,7 +2,8 @@
 const nextConfig = {
     images: {
         domains: ["i.ibb.co", "img.freepik.com"]
-    }
+    },
+
 };
 
 module.exports = nextConfig;

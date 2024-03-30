@@ -4,11 +4,14 @@ import FlashSaleBody from "./FlashSaleBody";
 import Link from "next/link";
 
 const FlashSale = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/flash-sale",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const flashesData = await res.json();
 
   // Sort the flashes based on product creation time

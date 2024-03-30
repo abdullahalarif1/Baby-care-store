@@ -9,7 +9,8 @@ interface TProduct {
 }
 
 const ProductsDetail = async ({ params }: TProduct) => {
-  const res = await fetch(`http://localhost:5000/products/${params.products}
+  const res =
+    await fetch(`https://baby-care-store-backend.vercel.app/products/${params.products}
   `);
   const data = await res.json();
 

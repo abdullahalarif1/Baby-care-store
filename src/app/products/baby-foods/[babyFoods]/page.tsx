@@ -9,8 +9,11 @@ interface TProduct {
 }
 
 const BabyFoodDetail = async ({ params }: TProduct) => {
-  const res = await fetch(`http://localhost:5000/products/${params.babyFoods}
-  `);
+  const res =
+    await fetch(`https://baby-care-store-backend.vercel.app/products/${params.babyFoods}
+  `, {
+    next: {revalidate: 30}
+  });
   const data = await res.json();
 
   return (

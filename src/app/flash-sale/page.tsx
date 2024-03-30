@@ -4,7 +4,9 @@ import { TFlashProduct } from "@/Types/type";
 import Countoun from "@/components/Countoun";
 
 const FlashSale = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale");
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/flash-sale"
+  );
   const flashes = await res.json();
 
   return (

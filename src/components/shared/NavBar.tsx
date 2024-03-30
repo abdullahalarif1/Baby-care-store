@@ -15,7 +15,7 @@ const NavBar = () => {
         <Link href="/flash-sale">Flash Sale</Link>
       </li>
       <li>
-        <Link href="/categories">Categories</Link>
+        <Link href="/dashboard">Dashboard</Link>
       </li>
       <li>
         <Link href="/about-us">About Us</Link>

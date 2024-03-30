@@ -43,7 +43,9 @@ const Categories = async () => {
   // const thirdCategory = brandsCategoriesData[2];
   // const fourthCategory = brandsCategoriesData[3];
 
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/products"
+  );
   const brandsCategoriesData = await res.json();
 
   return (

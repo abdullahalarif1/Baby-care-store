@@ -5,11 +5,14 @@ import { TProducts } from "@/Types/type";
 import TrendingProductBoady from "./TrendingProductBoady";
 
 const TrendingProducts = async () => {
-  const res = await fetch("http://localhost:5000/products", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/products",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const data = await res.json();
 
   // Sort products by ratings in descending order

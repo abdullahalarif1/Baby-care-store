@@ -8,7 +8,12 @@ const AllProductsPage = async ({
   searchParams: TProducts;
 }) => {
   const res = await fetch(
-    `http://localhost:5000/products?category=${searchParams.category}`
+    `https://baby-care-store-backend.vercel.app/products?category=${searchParams.category}`,
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
   );
   const productCategory = await res.json();
 

@@ -5,11 +5,14 @@ import Link from "next/link";
 import React from "react";
 
 const BabyCare = async () => {
-  const res = await fetch("http://localhost:5000/products?brand=baby-care", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/products?brand=baby-care",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const babyCareData = await res.json();
 
   return (

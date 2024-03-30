@@ -4,11 +4,14 @@ import Link from "next/link";
 import React from "react";
 
 const Dashboard = async () => {
-  const res = await fetch("http://localhost:5000/products", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://baby-care-store-backend.vercel.app/products",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const productsData = await res.json();
   const sortedProducts = productsData.sort(
     (a: TProducts, b: TProducts) => b.ratings - a.ratings

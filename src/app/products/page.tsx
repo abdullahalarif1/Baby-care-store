@@ -21,11 +21,14 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/products", {
-          next: {
-            revalidate: 30,
-          },
-        });
+        const res = await fetch(
+          "https://baby-care-store-backend.vercel.app/products",
+          {
+            next: {
+              revalidate: 30,
+            },
+          }
+        );
         const data = await res.json();
         const sortedProducts = data.sort(
           (a: TProducts, b: TProducts) => b.ratings - a.ratings
